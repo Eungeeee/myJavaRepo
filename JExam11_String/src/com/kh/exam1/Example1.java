@@ -7,6 +7,7 @@ import java.util.Scanner;
  *  입력을 받아서 구분을 하시오.
  *  단, 사용자가 yes 또는 YES (no 또는 NO도 마찬가지) 를 입력해도 동일한 문자열로 인식이 되도록 한다.
  */
+
 public class Example1 {
 
 	public static Scanner sc = new Scanner(System.in);

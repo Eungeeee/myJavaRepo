@@ -47,5 +47,4 @@ public class Sample2 {
 			System.out.println("st.nextToken() -> " + st.nextToken("-"));
 		}
 	}
-
 }

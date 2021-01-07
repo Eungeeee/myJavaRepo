@@ -32,5 +32,4 @@ public class Example2 {
 		}
 		System.out.println(sb1);
 	}
-
 }

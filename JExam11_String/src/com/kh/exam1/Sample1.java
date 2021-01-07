@@ -96,6 +96,7 @@ public class Sample1 {
 		// 클래스 메서드로 delimiter 문자열 구분자를 기본으로 하는 문자열 결합을 반환한다.
 		String joinStr = String.join("-", date);
 		System.out.println(joinStr);
+		
 	}
 
 }
