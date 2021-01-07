@@ -42,9 +42,9 @@ public class Sample2 {
 			System.out.println("st.nextToken() -> " + st.nextToken());
 		}
 		
-		st = new StringTokenizer("2021-01-07","-");
+		st = new StringTokenizer("2021-01-07");
 		while(st.hasMoreTokens()) {
-			System.out.println("st.nextToken() -> " + st.nextToken());
+			System.out.println("st.nextToken() -> " + st.nextToken("-"));
 		}
 	}
 
