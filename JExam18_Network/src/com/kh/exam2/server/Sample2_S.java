@@ -9,9 +9,10 @@ public class Sample2_S {
 		try {
 			String recv = "";
 			char[] buffer = new char[512];
-			
+			int port = 51000;
+			ServerSocket sSocket;
 			// 서버 소켓 생성 -> 포트 바인딩 -> TCP LISTEN 상태
-			ServerSocket sSocket = new ServerSocket(51000);
+			sSocket = new ServerSocket(port);
 			
 			// 클라이언트의 접속 요청이 올 때 까지 대기
 			// 접속 요청이 오면 승인하고 새로운 소켓을 생성
