@@ -2,8 +2,11 @@ package com.kh.exam9;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 class EatWhat {
@@ -46,7 +49,7 @@ class EatWhat {
 	public String Chinese() {
 		ArrayList<String> ChineseMenu = new ArrayList<>();
 		
-		String ChineseMenuArr[] = {"자장면", "짬뽕", "탕수육", "마라탕", "마라샹궈", "온면", "깐풍기", "사천 탕수육", "마파두부", "칠리새우", "크림새우",
+		String ChineseMenuArr[] = {"짜장면", "짬뽕", "탕수육", "마라탕", "마라샹궈", "온면", "깐풍기", "사천 탕수육", "마파두부", "칠리새우", "크림새우",
 				"양장피", "고추잡채", "라조기"};
 		for (int i = 0; i < ChineseMenuArr.length; i++) {
 				ChineseMenu.add(ChineseMenuArr[i]);
@@ -108,9 +111,10 @@ class MainWindow {
 		frm_main.add(pan_up, BorderLayout.NORTH);
 		pan_up.add(pan_text);
 		JLabel lbl_notice = new JLabel("결정이 힘든 당신을 위한 점심메뉴 고르기!!");
-		lbl_notice.setFont(new Font("Apple SD Gothic Neo", Font.BOLD, 30));
+		lbl_notice.setFont(new Font("SDSamliphopangcheTTFOutline", Font.PLAIN, 30));
 		lbl_notice.setForeground(new Color(75, 0, 130));
 		pan_text.add(lbl_notice);
+		lbl_notice.setOpaque(true);
 		
 		JPanel lbl = new JPanel(new BorderLayout());
 		JPanel pan_north = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -121,31 +125,31 @@ class MainWindow {
 		
 		JButton btn1 = new JButton("한식");
 		btn1.setForeground(new Color(147, 112, 219));
-		btn1.setFont(new Font("Apple SD Gothic Neo", Font.PLAIN, 18));
+		btn1.setFont(new Font("SDSamliphopangcheTTFBasic", Font.PLAIN, 18));
 		btn1.setBounds(30, 100, 50, 30);
 		lbl.add(btn1);
 		
 		JButton btn2 = new JButton("양식");
 		btn2.setForeground(new Color(147, 112, 219));
-		btn2.setFont(new Font("Apple SD Gothic Neo", Font.PLAIN, 18));
+		btn2.setFont(new Font("SDSamliphopangcheTTFBasic", Font.PLAIN, 18));
 		btn2.setBounds(50, 170, 50, 30);
 		lbl.add(btn2);
 		
 		JButton btn3 = new JButton("중식");
 		btn3.setForeground(new Color(147, 112, 219));
-		btn3.setFont(new Font("Apple SD Gothic Neo", Font.PLAIN, 18));
+		btn3.setFont(new Font("SDSamliphopangcheTTFBasic", Font.PLAIN, 18));
 		btn3.setBounds(70, 170, 50, 30);
 		lbl.add(btn3);
 		
 		JButton btn4 = new JButton("일식");
 		btn4.setForeground(new Color(147, 112, 219));
-		btn4.setFont(new Font("Apple SD Gothic Neo", Font.PLAIN, 18));
+		btn4.setFont(new Font("SDSamliphopangcheTTFBasic", Font.PLAIN, 18));
 		btn4.setBounds(90, 170, 50, 30);
 		lbl.add(btn4);
 		
 		JButton btn5 = new JButton("분식");
 		btn5.setForeground(new Color(147, 112, 219));
-		btn5.setFont(new Font("Apple SD Gothic Neo", Font.PLAIN, 18));
+		btn5.setFont(new Font("SDSamliphopangcheTTFBasic", Font.PLAIN, 18));
 		btn5.setBounds(110, 170, 50, 30);
 		lbl.add(btn5);
 		
@@ -154,14 +158,29 @@ class MainWindow {
 		
 		JLabel Res = new JLabel("결과!!");
 		
-		Res.setFont(new Font("Apple SD Gothic Neo", Font.BOLD, 25));
+		Res.setFont(new Font("SDSamliphopangcheTTFBasic", Font.PLAIN, 25));
 		Res.setForeground(new Color(55, 0, 120));
 		Res.setBounds(50, 100, 200, 60);
 		lbl.add(Res);
+
+
 		
-		JPanel pan_bottom = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		frm_main.add(pan_bottom, BorderLayout.SOUTH);
-		pan_bottom.add(Res);
+//		ImageIcon ico_img = null;
+//		try {
+//			ico_img = new ImageIcon(ImageIO.read(new File("/Users/moongjee/FoodImg/Korean/부대찌개.jpg")));
+//		} catch (IOException e6) {
+//			e6.printStackTrace();
+//		}
+//		JLabel lbl_img = new JLabel();
+//		lbl_img.setIcon(ico_img);
+//		lbl_img.setPreferredSize(new Dimension(50, 50));
+//		pan_bottom.add(lbl_img);
+		
+//		JLabel lbl_menuRes = new JLabel();
+//		pan_bottom.add(lbl_menuRes);
+//		
+//		frm_main.add(pan_bottom, BorderLayout.SOUTH);
+//		lbl_menuRes.setOpaque(true);
 		
 		btn1.addActionListener(new ActionListener() {
 			
